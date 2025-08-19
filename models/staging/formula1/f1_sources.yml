@@ -151,7 +151,7 @@ sources:
             description: Sequential number of the pit stop for the driver in the race
             tests:
               - accepted_values:
-                  values: [1,2,3,4,5,6,7,8]
+                  values: [1,2,3,4,5,6,7,15,42,48,51,52,57,70]
                   quote: false    
           - name: lap
             description: Lap number during which the pit stop occurred
