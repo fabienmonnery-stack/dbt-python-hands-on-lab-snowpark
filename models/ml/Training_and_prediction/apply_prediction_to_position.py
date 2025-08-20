@@ -73,6 +73,10 @@ def model(dbt, session):
        tags = "predict",
        use_anonymous_sproc=True
    )
+
+   # Create a stage in Snowflake to save our model file
+   session.sql('create or replace stage MODELSTAGE').collect()
+
    session._use_scoped_temp_objects = False
    download_models_and_libs_from_stage(session)
    predictor = load_model(session)
